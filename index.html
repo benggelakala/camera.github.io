@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>User Authentication</h1>
+
+<div id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required oninput="clearErrorMessage()">
+    <label for="password">Password:</label>
+    <input type="password" id="password" required oninput="clearErrorMessage()">
+
+    <button onclick="login()">Login</button>
+    <div id="errorMessage" style="display:none; color: red;"></div>
+</div>
+
+<div id="welcomeMessage" style="display:none;">
+    <p>Welcome, <span id="loggedInUser"></span>!</p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+
+</html>
